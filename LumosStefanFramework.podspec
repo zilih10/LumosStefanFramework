@@ -23,8 +23,8 @@ Pod::Spec.new do |spec|
   spec.exclude_files = "Classes/Exclude"
   spec.swift_version = "4.2" 
 
-  spec.dependency = 'Amplitude', '~> 8.8.0'
-  spec.dependency = 'Adjust', '~> 4.31.0'
+  spec.dependency "Amplitude", "~> 8.8.0"
+  spec.dependency "Adjust", "~> 4.31.0"
 
 end
 
