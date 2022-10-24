@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Adjust
+import Amplitude
 
 public class TrackManager {
     public init() {

@@ -1,0 +1,6 @@
+framework module Pods_LumosStefanFramework {
+  umbrella header "Pods-LumosStefanFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

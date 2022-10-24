@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FEED34FA55B2B63AE14ED60 /* Pods_LumosStefanFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C599CF6143AA1A691D6C4250 /* Pods_LumosStefanFramework.framework */; };
 		F809CCD329073FE400580E6F /* LumosStefanFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F809CCD229073FE400580E6F /* LumosStefanFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F809CCDA2907400E00580E6F /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809CCD92907400E00580E6F /* TrackManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97AA98C3BF27DB055F3D09F0 /* Pods-LumosStefanFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LumosStefanFramework.debug.xcconfig"; path = "Target Support Files/Pods-LumosStefanFramework/Pods-LumosStefanFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		C599CF6143AA1A691D6C4250 /* Pods_LumosStefanFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LumosStefanFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45EA0F968800FD1BD1CEDEC /* Pods-LumosStefanFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LumosStefanFramework.release.xcconfig"; path = "Target Support Files/Pods-LumosStefanFramework/Pods-LumosStefanFramework.release.xcconfig"; sourceTree = "<group>"; };
 		F809CCCF29073FE400580E6F /* LumosStefanFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LumosStefanFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F809CCD229073FE400580E6F /* LumosStefanFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LumosStefanFramework.h; sourceTree = "<group>"; };
 		F809CCD92907400E00580E6F /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
@@ -22,17 +26,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FEED34FA55B2B63AE14ED60 /* Pods_LumosStefanFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1355E7A675ADFEB5E3147C16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C599CF6143AA1A691D6C4250 /* Pods_LumosStefanFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26D16007966FDEC0F62F8A80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97AA98C3BF27DB055F3D09F0 /* Pods-LumosStefanFramework.debug.xcconfig */,
+				D45EA0F968800FD1BD1CEDEC /* Pods-LumosStefanFramework.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F809CCC529073FE400580E6F = {
 			isa = PBXGroup;
 			children = (
 				F809CCD129073FE400580E6F /* LumosStefanFramework */,
 				F809CCD029073FE400580E6F /* Products */,
+				26D16007966FDEC0F62F8A80 /* Pods */,
+				1355E7A675ADFEB5E3147C16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F809CCD629073FE400580E6F /* Build configuration list for PBXNativeTarget "LumosStefanFramework" */;
 			buildPhases = (
+				9E61FF6F25CF4C49DAC68A64 /* [CP] Check Pods Manifest.lock */,
 				F809CCCA29073FE400580E6F /* Headers */,
 				F809CCCB29073FE400580E6F /* Sources */,
 				F809CCCC29073FE400580E6F /* Frameworks */,
@@ -127,6 +153,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E61FF6F25CF4C49DAC68A64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LumosStefanFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F809CCCB29073FE400580E6F /* Sources */ = {
@@ -262,6 +313,7 @@
 		};
 		F809CCD729073FE400580E6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97AA98C3BF27DB055F3D09F0 /* Pods-LumosStefanFramework.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +344,7 @@
 		};
 		F809CCD829073FE400580E6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45EA0F968800FD1BD1CEDEC /* Pods-LumosStefanFramework.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
