@@ -11,10 +11,14 @@ import Amplitude
 
 public class TrackManager {
     public init() {
-        print("asd")
+        setUpAmplitude()
     }
     
-    public func debugPrint() {
-        print("debug print")
+    private func setUpAmplitude() {
+        let yourAppToken = "e32eaf896ec7f5651e8bc96450559e19"
+        let environment = ADJEnvironmentSandbox
+        let adjustConfig = ADJConfig(appToken: yourAppToken, environment: environment)
+
+        Adjust.appDidLaunch(adjustConfig)
     }
 }
