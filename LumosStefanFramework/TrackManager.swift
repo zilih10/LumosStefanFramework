@@ -12,6 +12,7 @@ import Amplitude
 public class TrackManager {
     public init() {
         setUpAdjust()
+        setUpAmplitude()
     }
     
     private func setUpAdjust() {
@@ -23,5 +24,10 @@ public class TrackManager {
     }
     
     private func setUpAmplitude() {
+        let amplitudeInstance = Amplitude.instance()
+        amplitudeInstance.trackingSessionEvents = true
+        amplitudeInstance.initializeApiKey("e32eaf896ec7f5651e8bc96450559e19")
+        amplitudeInstance.setUserId(Bundle.main.bundleIdentifier ?? "")
+        amplitudeInstance.logEvent("app_start")
     }
 }
