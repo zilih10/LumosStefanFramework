@@ -9,4 +9,12 @@ target 'LumosStefanFramework' do
   pod 'Amplitude', '~> 8.8.0'
   pod 'Adjust', '~> 4.31.0'
 
+
+
+post_install do |installer_representation|
+   installer_representation.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+         config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'AMPLITUDE_SSL_PINNING=1']
+      end
+   end
 end
